@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+/* Custom animations for cart popup */
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    70% {
+        transform: translateX(-10px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.animate-slide-in-right {
+    animation: slide-in-right 0.4s ease-out;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: rgb(29, 28, 23);
+    overflow-y: scroll;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+@theme {
+    --color-basecolor: #ffffff;
+    --text-letter: 1.2rem;
+    --color-navbase: rgb(29, 28, 23);
+    --color-navbase2: #fffdf6;
+    --color-secBase: #d2bfac;
+    --color-secBase2: #c4af99;
+    --color-secBase3: #d9cec3;
+    --color-secBase4: #dad5d0;
+    --color-dashbg: #eceeec;
+    --color-textV1: #1a1a1a;
+    --color-feedback: #f0eee8;
+}

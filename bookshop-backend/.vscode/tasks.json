@@ -1,0 +1,46 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run Spring Boot App",
+            "type": "shell",
+            "command": "java",
+            "args": [
+                "-cp",
+                "target/classes:C:/Users/%USERNAME%/.m2/repository/**/*.jar",
+                "com.bookshop.BookshopBackendApplication"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "new"
+            },
+            "problemMatchers": []
+        },
+        {
+            "label": "Compile Java Classes",
+            "type": "shell",
+            "command": "javac",
+            "args": [
+                "-cp",
+                "./lib/*",
+                "-d",
+                "target/classes",
+                "src/main/java/com/bookshop/*.java",
+                "src/main/java/com/bookshop/**/*.java"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "new"
+            }
+        }
+    ]
+}
